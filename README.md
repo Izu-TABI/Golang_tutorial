@@ -5,7 +5,7 @@
 ## memo
 
 When importing a package contained in another module.<br>
-``go mod init <directryname>/<filename>``
+``go mod init example.com/<filename>``
 <br><br>
 
 Add new module requirements and sums.<br>
@@ -14,4 +14,8 @@ Add new module requirements and sums.<br>
 
 Run code<br>
 ``go run .``
+
+The command specifies that example.com/greetings should be replaced with ../greetings for the purpose of locating the dependency.<br>
+``$ go mod edit -replace example.com/greetings=../greetings``
+
 
